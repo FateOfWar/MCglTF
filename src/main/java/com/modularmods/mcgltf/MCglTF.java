@@ -282,7 +282,7 @@ public class MCglTF {
 	}
 	
 	public boolean isShaderModActive() {
-		return isOptiFineExist && net.optifine.shaders.Shaders.isShaderPackInitialized && !net.optifine.shaders.Shaders.currentShaderName.equals(net.optifine.shaders.Shaders.SHADER_PACK_NAME_DEFAULT);
+		return false;
 	}
 	
 	public static MCglTF getInstance() {
