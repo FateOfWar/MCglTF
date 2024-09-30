@@ -17,10 +17,11 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven {
-		url "https://cursemaven.com"
-		content {
-			includeGroup "curse.maven"
-		}
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
 	}
 	flatDir {
 		dirs 'libs'
@@ -40,8 +41,7 @@ dependencies {
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-	modImplementation "curse.maven:irisshaders-455508:4145293"
-	implementation fileTree(dir: 'libs', include: '*.jar')
+	modImplementation "maven.modrinth:iris:${project.iris_version}"
 }
 
 processResources {
